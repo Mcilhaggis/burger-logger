@@ -39,8 +39,8 @@ const printQuestionMarks = (num) => {
 // Store the MySQL query functions in an object to be exported
 const orm = {
     selectAll(tableInput, cb) {
-        const query = `SELECT * FROM ${tableInput};`; //Is it burgers or a ${input}
-        connection.query(query, (err,res) => {
+        const queryString = `SELECT * FROM ${tableInput};`; //Is it burgers or a ${input}
+        connection.query(queryString, (err,res) => {
             if(err) {
                 throw err;
             }
@@ -49,7 +49,7 @@ const orm = {
     },
     
     insertOne(table, cols, vals, cb) {
-        let query = `INSERT INTO ${table}`;
+        let queryString = `INSERT INTO ${table}`;
 
         
         queryString += ' (';
@@ -59,9 +59,9 @@ const orm = {
         queryString += printQuestionMarks(vals.length);
         queryString += ') ';
 
-        console.log(query);
+        console.log(queryString);
 
-        connection.query(query, vals, (err, res) => {
+        connection.query(queryString, vals, (err, res) => {
         if (err) {
             throw err;
         }
@@ -73,15 +73,15 @@ const orm = {
     
     
     updateOne(table, objColVals, condition, cb) {
-        let query = `UPDATE ${table}`;
+        let queryString = `UPDATE ${table}`;
     
         queryString += ' SET ';
         queryString += objToSql(objColVals);
         queryString += ' WHERE ';
         queryString += condition;
     
-        console.log(query);
-        connection.query(query, (err, res) => {
+        console.log(queryString);
+        connection.query(queryString, (err, res) => {
           if (err) {
             throw err;
           }
