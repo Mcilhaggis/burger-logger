@@ -1,21 +1,21 @@
-//Require the orm file
-const orm = require('orm');
+// Import the ORM to create functions that will interact with the database.
+const orm = require('../config/orm.js');
 
+const burgers = {
+  selectAll(cb) {
+    orm.selectAll('burgers', (res) => cb(res));
+  },
+  // The variables cols and vals are arrays.
+  insertOne(cols, vals, cb) {
+    orm.insertOne('burgers', cols, vals, (res) => cb(res));
+  },
+  updateOne(objColVals, condition, cb) {
+    orm.update('burgers', objColVals, condition, (res) => cb(res));
+  },
+//   delete(condition, cb) {
+//     orm.delete('burgers', condition, (res) => cb(res));
+//   },
+};
 
-
-
-// Inside burger.js, create the code that will call the ORM functions using burger specific input for the ORM.
-
-
-
-
-
-
-
-
-
-
-
-
-//Export the file
-module.exports  
+// Export the database functions for the controller (catsController.js).
+module.exports = burgers;
