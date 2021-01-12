@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
     });
   });
   
-  router.put('/burgers/:id', (req, res) => {
+  router.put('api/burgers/:id', (req, res) => {
     const condition = `id = ${req.params.id}`;
   
     console.log('condition', condition);
