@@ -6,6 +6,7 @@ h1, h2{
   color: red;
   text-align: center;
   font-family: 'Racing Sans One', cursive;
+  padding-top: 1em;
 }
 
 ul{
