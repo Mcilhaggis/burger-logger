@@ -89,7 +89,23 @@ const orm = {
           cb(res);
         });
       },
-    }
+
+
+      deleteOne(table, condition, cb) {
+        let queryString = `DELETE FROM ${table}`;
+        queryString += ' WHERE ';
+        queryString += condition;
+    
+        connection.query(queryString, (err, result) => {
+          if (err) {
+            throw err;
+          }
+    
+          cb(result);
+        });
+      },
+    };
+    
 
 //Export the orm object to be used in the model (burger.js)
 module.exports = orm;

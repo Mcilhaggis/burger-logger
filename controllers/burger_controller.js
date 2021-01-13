@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
     });
   });
   
-  router.put('api/burgers/:id', (req, res) => {
+  router.put('/api/burgers/:id', (req, res) => {
     const condition = `id = ${req.params.id}`;
   
     console.log('condition', condition);
@@ -38,6 +38,7 @@ router.get('/', (req, res) => {
       (result) => {
         if (result.changedRows === 0) {
           // If no rows were changed, then the ID must not exist, so 404
+          console.log("not connecting to db")
           return res.status(404).end();
         }
         res.status(200).end();
@@ -48,7 +49,7 @@ router.get('/', (req, res) => {
   router.delete('/api/burgers/:id', (req, res) => {
     const condition = `id = ${req.params.id}`;
   
-    burger.delete(condition, (result) => {
+    burger.deleteOne(condition, (result) => {
       if (result.affectedRows === 0) {
         // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
