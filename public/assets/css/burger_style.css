@@ -1,0 +1,51 @@
+body {
+  background-color: #ffd66b !important;
+}
+
+h1, h2{
+  color: red;
+  text-align: center;
+  font-family: 'Racing Sans One', cursive;
+}
+
+ul{
+  list-style-type: none;
+  list-style-position: inside;
+
+}
+
+li, button {
+  padding: 10px;
+  margin: 5px;
+  background: #faebd7;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+#create-form{
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+#submitBtn{
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  
+}
