@@ -8,7 +8,7 @@
 
 This fun application uses ** MySQL, Node, Express, handlebars and a home made ORM ** to create a restuarant styled app. When a user inputs their desired burger name, it will display on the right side of the page, then on the click of a button it will move to the left side where it is considered "eaten". Each entry is stored in the database regardless of it's position on the page. There is also the option to delete the item, making this a CRUD application. 
 
-![Screenshot of the Burger Logger Application.](public/assets/css/img/screenshot1.png "Screenshot of the Burger Logger Application")
+![Screenshot of the Burger Logger Application.](public/assets/css/img/Screenshot1.png "Screenshot of the Burger Logger Application")
  
 ## Installation
 
