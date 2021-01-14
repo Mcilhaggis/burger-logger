@@ -23,16 +23,16 @@ The application can be invoked by using the following command:
 
 ## Tool & Resources
 
-Node.js - JavaScript runtime environment
-Express.js - JavaScript
-Handlebars - 
-MySQLWorkbench - Visual database design tool
+* Node.js - JavaScript runtime environment
+* Express.js - JavaScript
+* Handlebars - 
+* MySQLWorkbench - Visual database design tool
 
 ### Dependencies
 
-mysql - Used to connect to the MySQL database and perform queries
-express.js - 
-Handlebars - 
+* mysql - Used to connect to the MySQL database and perform queries
+* express.js - minimal and flexible Node.js web application framework 
+* Handlebars - uses a template and an input object to generate HTML
 
 ## Assignment Challenges
 
