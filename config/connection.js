@@ -2,7 +2,7 @@
 const mysql = require("mysql");
 var connection;
 
-require('dotenv').config()
+// const dotenv = require('.env')
 
 
 if (process.env.JAWSDB_URL) {

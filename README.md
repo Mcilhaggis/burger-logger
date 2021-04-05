@@ -21,6 +21,9 @@ The application can be invoked by using the following command:
 
 `node server.js`
 
+## Live Project
+the project can be viewing live here: https://fast-ravine-10902.herokuapp.com/
+
 ## Tool & Resources
 
 * Node.js - JavaScript runtime environment
